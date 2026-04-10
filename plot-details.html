@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plot Details | JK Real Estate</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) { .gallery { grid-template-columns: 1fr; } }
+        .gallery img { width: 100%; border-radius: 12px; }
+        .details-main { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        @media (max-width: 992px) { .details-main { grid-template-columns: 1fr; } }
+        .detail-card { background: white; padding: 30px; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 25px; }
+        .highlight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
+        .map-box { height: 300px; background: #e5e7eb; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .mobile-actions { position: fixed; bottom: 0; left: 0; width: 100%; background: white; display: flex; padding: 10px; gap: 10px; box-shadow: 0 -5px 15px rgba(0,0,0,0.1); z-index: 1001; }
+        @media (min-width: 769px) { .mobile-actions { display: none; } }
+    </style>
+</head>
+<body style="padding-bottom: 80px;">
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">JK Real Estate</a>
+            <a href="index.html" class="btn btn-outline" style="padding: 10px 15px;">Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 30px;">
+        <!-- Breadcrumb -->
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 20px;">Home / Plots / Kuruli / 1200 sq.ft Plot</p>
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="images/plot-1.png" alt="Plot Frontage" style="height: 410px; object-fit: cover;">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <img src="images/plot-3.png" alt="Layout View" style="height: 200px; object-fit: cover;">
+                <img src="images/plot-2.png" alt="Road Access" style="height: 200px; object-fit: cover;">
+            </div>
+        </div>
+
+        <div class="details-main">
+            <div>
+                <div class="detail-card">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <h1>Road-Touch Residential Plot in Kuruli</h1>
+                            <p style="color: var(--text-muted); margin-top: 5px;">Near Chakan-Alandi Road, Kuruli, Pune</p>
+                        </div>
+                        <div style="font-size: 2rem; font-weight: 800; color: var(--primary);">₹18.5 L</div>
+                    </div>
+
+                    <div class="highlight-grid">
+                        <div style="border: 1px solid var(--border); padding: 15px; border-radius: 8px;">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Plot Size</div>
+                            <div style="font-weight: 700; font-size: 1.1rem;">1200 Sq.Ft</div>
+                        </div>
+                        <div style="border: 1px solid var(--border); padding: 15px; border-radius: 8px;">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Facing</div>
+                            <div style="font-weight: 700; font-size: 1.1rem;">East Facing</div>
+                        </div>
+                        <div style="border: 1px solid var(--border); padding: 15px; border-radius: 8px;">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Road Access</div>
+                            <div style="font-weight: 700; font-size: 1.1rem;">20 Ft Paved Road</div>
+                        </div>
+                        <div style="border: 1px solid var(--border); padding: 15px; border-radius: 8px;">
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Status</div>
+                            <div style="font-weight: 700; font-size: 1.1rem;">Ready for Possession</div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 30px;">Key Features</h3>
+                    <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-muted);">
+                        <li style="margin-bottom: 10px;">Electricity connection available immediately</li>
+                        <li style="margin-bottom: 10px;">Common water storage tank for the layout</li>
+                        <li style="margin-bottom: 10px;">Compound wall for the entire project</li>
+                        <li style="margin-bottom: 10px;">Just 500 meters from Nashik Highway</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Location Map</h3>
+                    <div class="map-box" style="margin-top: 20px;">
+                        <!-- Placeholder for Map -->
+                        <div style="text-align: center;">
+                            <p style="font-weight: 700; color: var(--text-muted);">Google Map View</p>
+                            <p style="font-size: 0.8rem;">(Exact location shared on WhatsApp)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="detail-card" style="position: sticky; top: 100px; border: 2px solid var(--primary);">
+                    <h3 style="margin-bottom: 15px;">Book Site Visit</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">Get a free pick-up and drop for your family items this Sunday.</p>
+                    <form id="details-form">
+                        <input type="text" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 15px;">
+                        <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 15px;">
+                        <button type="submit" class="btn btn-primary btn-block">Book Visit</button>
+                    </form>
+                    <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center;">
+                        <p style="font-size: 0.9rem; margin-bottom: 10px;">Contact Jeevan Kale</p>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="tel:+919970434686" class="btn btn-outline" style="flex: 1; padding: 10px;">Call</a>
+                            <a href="https://wa.me/919970434686" class="btn btn-whatsapp" style="flex: 1; padding: 10px;">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Actions -->
+    <div class="mobile-actions">
+        <a href="tel:+919970434686" class="btn btn-primary" style="flex: 1;">Call Now</a>
+        <a href="https://wa.me/919970434686" class="btn btn-whatsapp" style="flex: 1;">WhatsApp Now</a>
+    </div>
+
+</body>
+<script src="main.js"></script>
+</html>
