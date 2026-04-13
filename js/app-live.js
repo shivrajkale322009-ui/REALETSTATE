@@ -42,6 +42,7 @@ const compressImage = async (file) => {
 let currentImageArray = [];
 
 function loadRealtimePlots() {
+    if (!plotGrid) return; // Grid removed from DOM
     const q = query(collection(db, "plots"));
     onSnapshot(q, (snapshot) => {
         console.log("Firestore Update: " + snapshot.size + " plots found.");
