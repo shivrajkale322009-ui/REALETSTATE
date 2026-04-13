@@ -193,6 +193,40 @@ header.sticky {
     transform: translateY(-3px);
 }
 
+/* WhatsApp Radar Animation */
+.whatsapp-btn {
+    position: relative;
+    background: #25d366 !important;
+    border-color: #25d366 !important;
+    color: white !important;
+}
+
+.whatsapp-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #25d366;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulse-wave 2s infinite;
+    opacity: 0.5;
+}
+
+@keyframes pulse-wave {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
 .logo-text {
     font-size: 1.9rem;
     font-weight: 700;
@@ -988,11 +1022,11 @@ footer {
     }
 
     .logo-text {
-        font-size: 1.4rem;
+        font-size: 1.05rem; /* Decreased by 25% from 1.4rem */
     }
 
     .brand-accent {
-        font-size: 2rem;
+        font-size: 1.5rem; /* Decreased by 25% from 2rem */
     }
 
     .nav-menu {
